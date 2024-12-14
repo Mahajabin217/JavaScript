@@ -13,6 +13,7 @@
     <button onclick="console.log(10)">Click me</button>
     <button onclick="document.body.style.backgroundColor='Yellow'">Make Yellow</button>
     <button onclick="makeRed()">Make Red</button>
+    
     <script src="events.js"></script>
     <script>
         function makeRed() {
@@ -30,32 +31,30 @@
     <button id="event-listener">Handle event by add event listener</button>
 
     <script>
-        function handleOnClick(){
+        function handleOnClick() {
             //console.log('button clicked');
             const handlerStatus = document.getElementById('handler-status');
-            handlerStatus.innerText='Handled by function';
+            handlerStatus.innerText = 'Handled by function';
         }
 
         // Option-2:
 
-        document.getElementById('event-listener').addEventListener('click',function(){
-            const handlerStatus=document.getElementById('handler-status');
-            handlerStatus.innerText='Text updated by add event listener button'
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add event listener button'
         })
 
         // kono text input korle value pabo je bhbe
 
-        document.getElementById('btn-update').addEventListener('click',function(){
+        document.getElementById('btn-update').addEventListener('click', function () {
             const inputfield = document.getElementById('input-field');
-            const inputText =inputfield.value;
+            const inputText = inputfield.value;
             const p = document.getElementById('input-text-display');
-            p.innerText=inputText;
-            inputfield.value='';
+            p.innerText = inputText;
+            inputfield.value = '';
         })
+    
 
-        // Comment-Box banabo je bhbe
-
-        
     </script>
 </body>
 

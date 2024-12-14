@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My secret info</h1>
+    <input  id="delete-confirm"  type="text" placeholder="Type delete">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-confirm').addEventListener('click',function(event){
+            const text = event.target.value;
+            const deleteButton = document.getElementById('delete-btn');
+            if(text==='delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }
+        })
+    </script>
+</body>
+</html>
